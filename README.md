@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ros-slam-nav
 
 ### 1. Installation
@@ -87,3 +88,6 @@ For any problem, please report to [Issues](https://github.com/thanhphong98/ros-s
 
 
 # Farming-Robots-project-index
+=======
+# Farming Robot
+>>>>>>> 13c3347244fbdf835851836c1ada924918f8f2bb
