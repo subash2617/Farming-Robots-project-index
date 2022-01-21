@@ -2,7 +2,7 @@
 
 ### 1. Simulation
  
-#### 2.1. World simulation
+#### 1.1. World simulation
 There are many virtual environments that availabled in robot_gazebo's launch folder. Run below command to open virtual house environment. 
 ```
 roslaunch robot_gazebo robot_house.launch
@@ -23,7 +23,7 @@ When the map is created successfully, open a new terminal from remote PC and sav
 ```
 rosrun map_server map_saver -f ~/map
  ``` 
-#### 2.3. Navigation simulation
+#### 1.3. Navigation simulation
 Just like the SLAM simulation, Navigation simulation also requires prerequisites from world simulation section. 
 Open a new terminal and run the Navigation node.
 ```
