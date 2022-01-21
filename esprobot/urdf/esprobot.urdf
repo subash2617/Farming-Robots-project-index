@@ -1,0 +1,149 @@
+<robot
+  name="esprobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.15189 0.28953 0.27519"
+        rpy="0 0 0" />
+      <mass
+        value="0.9145" />
+      <inertia
+        ixx="0.0070051"
+        ixy="5.2127E-24"
+        ixz="6.1522E-22"
+        iyy="0.014005"
+        iyz="-4.4778E-22"
+        izz="0.0070101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://esprobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://esprobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Left_Motor">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 6.66133814775094E-16 0.0127084120721804"
+        rpy="0 0 0" />
+      <mass
+        value="0.0403856509973404" />
+      <inertia
+        ixx="3.05766741659313E-05"
+        ixy="3.40787911055489E-20"
+        ixz="8.58199707196664E-21"
+        iyy="3.05766741659314E-05"
+        iyz="-1.05789652121664E-20"
+        izz="5.96938637404994E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://esprobot/meshes/Left_Motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://esprobot/meshes/Left_Motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Wheel"
+    type="continuous">
+    <origin
+      xyz="0.28089 -0.27519 0.18903"
+      rpy="1.5708 6.123E-17 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Motor" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Right_Motor">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 6.66133814775094E-16 -0.00929158792781959"
+        rpy="0 0 0" />
+      <mass
+        value="0.0403856509973403" />
+      <inertia
+        ixx="3.05766741659313E-05"
+        ixy="6.52215369385811E-20"
+        ixz="-2.70083085270677E-21"
+        iyy="3.05766741659313E-05"
+        iyz="-1.30621673502647E-20"
+        izz="5.96938637404994E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://esprobot/meshes/Right_Motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://esprobot/meshes/Right_Motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Wheel"
+    type="continuous">
+    <origin
+      xyz="0.00089128 -0.27519 0.18903"
+      rpy="1.5708 -1.1583 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

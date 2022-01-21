@@ -1,0 +1,29 @@
+<launch>
+	<node pkg="esprobot" type="esprobot_node" name="esprobot_node">
+	<rosparam file="$(find esprobot)/config/opcode.yaml" command="load" />
+	</node>
+	<arg
+	name="model" />
+	<arg
+	name="gui"
+	default="False" />
+	<param
+	name="robot_description"
+	textfile="$(find esprobot)/urdf/esprobot.urdf" />
+	<param
+	name="use_gui"
+	value="$(arg gui)" />
+	<node
+	name="joint_state_publisher"
+	pkg="joint_state_publisher"
+	type="joint_state_publisher" />
+	<node
+	name="robot_state_publisher"
+	pkg="robot_state_publisher"
+	type="state_publisher" />
+	<node
+	name="rviz"
+	pkg="rviz"
+	type="rviz"
+	args="-d $(find esprobot)/urdf.rviz" />
+</launch>
