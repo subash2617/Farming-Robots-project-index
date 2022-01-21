@@ -1,14 +1,6 @@
 # ros-slam-nav
 
-### 1. Installation
-```
-cd ~/catkin_ws/src/
-git clone https://github.com/thanhphong98/ros-slam-nav
-cd catkin_ws
-catkin_make
-```
-
-### 2. Simulation
+### 1. Simulation
  
 #### 2.1. World simulation
 There are many virtual environments that availabled in robot_gazebo's launch folder. Run below command to open virtual house environment. 
@@ -21,7 +13,7 @@ In order to teleoperate the robot with the keyboard,  launch the teleoperation n
 roslaunch robot_teleop robot_teleop_key.launch
 ```
 
-#### 2.2. SLAM simulation
+#### 1.2. SLAM simulation
 The following instructions require prerequisites from the previous section. 
 Open a new terminal window from the PC and run  the SLAM node. Hector SLAM method is used by default. 
 ```
@@ -38,7 +30,7 @@ Open a new terminal and run the Navigation node.
 roslaunch robot_navigation robot_navigation.launch
 ``` 
  
-### 3. SLAM
+### 2. SLAM
 Run roscore from remote PC. 
 ```
 roscore 
@@ -62,7 +54,7 @@ Save the map.
 rosrun map_server map_saver -f ~/map
 ```
  
-### 4. Navigation
+### 3. Navigation
 Run roscore from remote PC. 
 ```
 roscore 
@@ -77,10 +69,6 @@ Open a new terminal from remote PC and launch the Navigation node.
 ```
 roslaunch robot_navigation robot_navigation.launch
 ```
-
-### 5. Problem
-For any problem, please report to [Issues](https://github.com/thanhphong98/ros-slam-nav/issues) or contact email thanhphongho1998@gmail.com 
- 
  
  
 
