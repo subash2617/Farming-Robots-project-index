@@ -1,4 +1,4 @@
-# ros-slam-nav
+# SLAM Navigation
 
 ### 1. Simulation
  
